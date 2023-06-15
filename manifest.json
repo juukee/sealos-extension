@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Sealos Cloud - Kubernetes High Availability Installation Tool",
+  "short_name": "Sealos Cloud",
+  "version": "1.0",
+  "description": "Sealos is a cloud operating system distribution with Kubernetes as its core. It abandons traditional cloud computing architecture in a cloud native manner and shifts to a new architecture with Kubernetes as the cloud core, enabling enterprises to use the cloud as easily as using personal computers.",
+  "icons": {
+    "16": "icons/sealos-logo-16.png",
+    "48": "icons/sealos-logo-48.png",
+    "128": "icons/sealos-logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.github.com/*",
+        "*://*.gitlab.com/*",
+        "*://*.bitbucket.org/*",
+        "*://*.gitlab.cn/*",
+        "*://*.cloud.sealos.io/*"
+      ],
+      "js": [
+        "dist/bundles/gitpodify.bundle.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/sealos-logo-16.png",
+      "48": "icons/sealos-logo-48.png",
+      "128": "icons/sealos-logo.png"
+    },
+    "default_title": "Sealos Cloud"
+  },
+  "background": {
+    "scripts": ["dist/bundles/background.bundle.js"]
+  },
+  "options_ui": {
+    "page": "src/options/options.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}

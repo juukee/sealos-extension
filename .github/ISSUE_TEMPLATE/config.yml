@@ -1,0 +1,4 @@
+contact_links:
+  - name: Security
+    url: https://www.cloud.sealos.io/security
+    about: Please report security vulnerabilities here.

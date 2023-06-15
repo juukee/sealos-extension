@@ -1,0 +1,5 @@
+*.log
+dist
+gitpod.xpi
+node_modules
+Sealos
